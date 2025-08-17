@@ -12,6 +12,28 @@
 </script>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<style id="widen-container">
+  /* 放大内容容器上限，让版心别太窄 */
+  .elementor-section .elementor-container{max-width:1320px!important}
+  .container,.container-lg,.container-xl,.site,.content,.wrap,.row,
+  .ast-container,.generate-content-container,.wp-site-blocks,.wp-block-group{
+    max-width:1320px!important;width:100%!important;margin-left:auto!important;margin-right:auto!important
+  }
+  /* 横幅保持全宽但不二次放大 */
+  .hero,.banner,.wp-block-cover,.wp-block-cover-image,
+  .elementor-section-stretched,.elementor-section--fullscreen{
+    max-width:none!important;width:100%!important;margin-left:0!important;margin-right:0!important
+  }
+  .hero img,.banner img,.wp-block-cover img,.wp-block-cover__image-background{
+    width:100%!important;height:auto!important;object-fit:cover!important;display:block!important
+  }
+  /* 防止字过小 */
+  html{font-size:16px!important}
+  h1{font-size:clamp(28px,3.2vw,56px)!important;line-height:1.15!important}
+  h2{font-size:clamp(22px,2.4vw,40px)!important;line-height:1.2!important}
+</style>
+
 <link rel="profile" href="https://gmpg.org/xfn/11">
 <link rel="preconnect" href="https://fonts.gstatic.com/">
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@800&amp;display=swap" rel="stylesheet">
