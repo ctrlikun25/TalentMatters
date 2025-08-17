@@ -11,11 +11,17 @@
 
   /* 让首屏横幅真正全屏铺满 */
   .hero, .banner, .wp-block-cover, .wp-block-cover-image,
-  .elementor-section-stretched, .elementor-section--fullscreen, .has-parallax {
-    max-width: none !important;
-    width: 100vw !important;
-    margin-left: calc(50% - 50vw) !important; /* 把背景推出容器左右白边 */
-  }
+.elementor-section-stretched, .elementor-section--fullscreen, .has-parallax {
+  max-width: none !important;
+  width: 100% !important;
+  margin-left: 0 !important;
+}
+.hero img, .banner img, .wp-block-cover img, .wp-block-cover__image-background {
+  width: 100% !important;
+  height: auto !important;
+  object-fit: cover !important;
+  display: block !important;
+}
 
   /* 背景图样式统一成 cover 居中不重复 */
   .wp-block-cover, .wp-block-cover-image, .wp-block-cover__image-background,
