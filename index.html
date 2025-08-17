@@ -14,25 +14,50 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<style id="widen-container">
-  /* 放大内容容器上限，让版心别太窄 */
-  .elementor-section .elementor-container{max-width:1320px!important}
-  .container,.container-lg,.container-xl,.site,.content,.wrap,.row,
-  .ast-container,.generate-content-container,.wp-site-blocks,.wp-block-group{
-    max-width:1320px!important;width:100%!important;margin-left:auto!important;margin-right:auto!important
+  /* —— 放大容器上限（同时覆盖常见主题 & Elementor 变量） —— */
+  :root{
+    --container-max-width: 1600px;
+    --content-width: 1600px;
+    --ast-container-width: 1600px;
   }
-  /* 横幅保持全宽但不二次放大 */
+  /* Elementor 变量（新版用这个控制版心） */
+  .elementor-section{ --container-max-width: 1600px !important; }
+  [class*="elementor-kit"]{ --container-max-width: 1600px !important; }
+
+  /* 常见容器类名一并放开（再大就把 1600 改成 1600/1680 即可） */
+  .elementor-section .elementor-container,
+  .container,.container-lg,.container-xl,.site,.content,.wrap,.row,
+  .wp-site-blocks,.wp-block-group,.generate-content-container,.ast-container{
+    max-width: 1600px !important;
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* 横幅保持全宽显示（不二次放大） */
   .hero,.banner,.wp-block-cover,.wp-block-cover-image,
   .elementor-section-stretched,.elementor-section--fullscreen{
-    max-width:none!important;width:100%!important;margin-left:0!important;margin-right:0!important
+    max-width: none !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
   .hero img,.banner img,.wp-block-cover img,.wp-block-cover__image-background{
-    width:100%!important;height:auto!important;object-fit:cover!important;display:block!important
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+    display: block !important;
   }
-  /* 防止字过小 */
-  html{font-size:16px!important}
-  h1{font-size:clamp(28px,3.2vw,56px)!important;line-height:1.15!important}
-  h2{font-size:clamp(22px,2.4vw,40px)!important;line-height:1.2!important}
+
+  /* ⚠️ 不再限制标题字号（删掉之前的 clamp） */
+  /* 如果依然觉得字小，可以额外加： 
+     .home h1{ font-size: 4vw !important; } （或 72px 等固定值）
+  */
+
+  /* 防止奇怪缩放 */
+  html{ transform:none !important; zoom:1 !important; }
 </style>
+
 
 <link rel="profile" href="https://gmpg.org/xfn/11">
 <link rel="preconnect" href="https://fonts.gstatic.com/">
@@ -56,7 +81,7 @@
 	<meta property="og:site_name" content="Talent Matters" />
 	<meta property="article:modified_time" content="2025-07-20T20:06:37+00:00" />
 	<meta property="og:image" content="https://www.talentmatters.com.au/wp-content/uploads/2021/02/Object-min.jpg" />
-	<meta property="og:image:width" content="1440" />
+	<meta property="og:image:width" content="1600" />
 	<meta property="og:image:height" content="998" />
 	<meta property="og:image:type" content="image/jpeg" />
 	<meta name="twitter:card" content="summary_large_image" />
