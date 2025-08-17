@@ -1,4 +1,41 @@
-<!DOCTYPE html> <html lang=en-US class="no-js no-svg js_active vc_desktop vc_transform" style><!--
+<!DOCTYPE html> <html lang=en-US class="no-js no-svg js_active vc_desktop vc_transform" style><style id="fullwidth-fix">
+  html, body { margin:0; padding:0; overflow-x:hidden; }
+
+  /* 放开被锁死的版心宽度 */
+  .container, .wrap, .site, .page, .content, .section, .row,
+  .vc_container, .vc_row, .vc_row-fluid, .wp-site-blocks, .wp-block-group,
+  .elementor-container, .elementor-section, .elementor-section-stretched {
+    max-width: none !important;
+    width: 100% !important;
+  }
+
+  /* 让首屏横幅真正全屏铺满 */
+  .hero, .banner, .wp-block-cover, .wp-block-cover-image,
+  .elementor-section-stretched, .elementor-section--fullscreen, .has-parallax {
+    max-width: none !important;
+    width: 100vw !important;
+    margin-left: calc(50% - 50vw) !important; /* 把背景推出容器左右白边 */
+  }
+
+  /* 背景图样式统一成 cover 居中不重复 */
+  .wp-block-cover, .wp-block-cover-image, .wp-block-cover__image-background,
+  .elementor-background-overlay, .elementor-motion-effects-container,
+  .bg-image, .has-background {
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+  }
+
+  /* 图片视频别被压缩在窄栏里 */
+  img, video, canvas { max-width: 100% !important; height: auto !important; }
+
+  /* 有些主题把主体区再套一层 max-width，统统放开 */
+  [class*="container"], [class*="wrap"], [class*="content"], [class*="section"] {
+    max-width: none !important;
+    width: 100% !important;
+  }
+</style>
+<!--
  Page saved with SingleFile 
  url: https://www.talentmatters.com.au/ 
  saved date: Sun Aug 17 2025 16:14:38 GMT+0700 (Indochina Time)
@@ -711,11 +748,11 @@ we can help</div><div style=font-size:60px;color:#0a0000;line-height:62px;text-a
 </div>
 <div class="vc_icon_element vc_icon_element-outer vc_icon_element-align-left vc_icon_element-have-style">
  <div class="vc_icon_element-inner vc_icon_element-color-globalcolor vc_icon_element-have-style-inner vc_icon_element-size-md vc_icon_element-style-rounded vc_icon_element-background vc_icon_element-background-color-custom" style=background-color:#0075b9>
- <span class="vc_icon_element-icon fab fa-facebook-square"></span><a class=vc_icon_element-link href=https://www.facebook.com/talentmattersau/ title target=_blank></a></div>
+ <span class="vc_icon_element-icon fab fa-facebook-square"></span><a class=vc_icon_element-link href=https://www.facebook.com/TalentsMatter/ title target=_blank></a></div>
 </div>
 <div class="vc_icon_element vc_icon_element-outer vc_icon_element-align-left vc_icon_element-have-style">
  <div class="vc_icon_element-inner vc_icon_element-color-globalcolor vc_icon_element-have-style-inner vc_icon_element-size-md vc_icon_element-style-rounded vc_icon_element-background vc_icon_element-background-color-custom" style=background-color:#0075b9>
- <span class="vc_icon_element-icon entypo-icon entypo-icon-instagrem"></span><a class=vc_icon_element-link href=https://www.instagram.com/talent_matters_au/ title target=_blank></a></div>
+ <span class="vc_icon_element-icon entypo-icon entypo-icon-instagrem"></span><a class=vc_icon_element-link href=https://www.instagram.com/talentmatters.au/ title target=_blank></a></div>
 </div>
  <div class="wpb_single_image wpb_content_element vc_align_left vc_custom_1613402041394">
  
@@ -878,11 +915,11 @@ Alexandria NSW 2015</p>
  </div>
  <div class="vc_icon_element vc_icon_element-outer vc_icon_element-align-left vc_icon_element-have-style">
  <div class="vc_icon_element-inner vc_icon_element-color-globalcolor vc_icon_element-have-style-inner vc_icon_element-size-md vc_icon_element-style-rounded vc_icon_element-background vc_icon_element-background-color-custom" style=background-color:#0075b9>
- <a class="vc_icon_element-link facebook" href=https://www.facebook.com/talentmattersau/ title target=_blank rel="noopener noreferrer"></a></div>
+ <a class="vc_icon_element-link facebook" href=https://www.facebook.com/TalentsMatter/ title target=_blank rel="noopener noreferrer"></a></div>
  </div>
  <div class="vc_icon_element vc_icon_element-outer vc_icon_element-align-left vc_icon_element-have-style">
  <div class="vc_icon_element-inner vc_icon_element-color-globalcolor vc_icon_element-have-style-inner vc_icon_element-size-md vc_icon_element-style-rounded vc_icon_element-background vc_icon_element-background-color-custom" style=background-color:#0075b9>
- <a class="vc_icon_element-link insta" href=https://www.instagram.com/talent_matters_au/ title target=_blank rel="noopener noreferrer"></a></div>
+ <a class="vc_icon_element-link insta" href=https://www.instagram.com/talentmatters.au/ title target=_blank rel="noopener noreferrer"></a></div>
  </div>
 </div></div></div></aside> </div>
  </div>
